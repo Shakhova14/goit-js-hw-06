@@ -7,10 +7,10 @@ let outputEl = document.querySelector('#name-output');
 function onInputChange(event) {
   inputEl = event.currentTarget.value;
   console.log(inputEl);
-if (inputEl !== null) {
+if (inputEl !== "") {
      outputEl.innerText = inputEl;
 } else 
 { 
-     return "Anonymous";}
+     outputEl.innerText = "Anonymous";}
 
 }

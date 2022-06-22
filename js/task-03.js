@@ -13,18 +13,13 @@ const images = [
   },
 ];
 
-const imageContainerEl = document.querySelector(".gallery");
+const ulEl = document.querySelector('.gallery');
 
-const elements = images.map(option => {
-   let liImageEL = document.createElement("li");
-  liImageEL.classList.add("pioner");
-  liImageEL.src = option.url;
-  liImageEL.alt = option.alt;
- 
- 
 
-  console.log(liImageEL);
-   return liImageEL;
+images.map(image => {
+  ulEl.insertAdjacentHTML(
+    'afterbegin',
+    `<li><img src = "${image.url}" alt = "${image.alt}"  width = "250"  /></li>`,
+  );
 });
 
- imageContainerEl.insertAdjacentHTML('afterbegin', liImageEL);

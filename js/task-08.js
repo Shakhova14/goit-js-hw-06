@@ -24,8 +24,7 @@ function onFormElSubmit(event) {
         
     } if (password === "") {
         alert("Введите пароль") ;
-       
-    } 
+           } 
      else {
        console.log(formData); 
        formEl.reset();
