@@ -16,10 +16,12 @@ const images = [
 const ulEl = document.querySelector('.gallery');
 
 
-images.map(image => {
-  ulEl.insertAdjacentHTML(
-    'afterbegin',
-    `<li><img src = "${image.url}" alt = "${image.alt}"  width = "250"  /></li>`,
-  );
-});
+const markup = images
+  .map((image) => `<li><img src = "${image.url}" alt = "${image.alt}"  width = "400"  /></li>`)
+  .join("");
+
+
+  ulEl.insertAdjacentHTML("afterbegin", markup);
+
+
 
